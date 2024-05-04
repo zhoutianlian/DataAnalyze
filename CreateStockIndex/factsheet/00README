@@ -1,0 +1,8 @@
+Create a new virtual environment & activate it.
+
+Install the requirements.
+
+Run: $> python gen_factsheet.py data/factsheet.json
+
+cd factsheet
+Run: $> python gen_factsheet.py data/test.json

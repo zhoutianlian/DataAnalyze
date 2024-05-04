@@ -1,0 +1,2 @@
+rlextra>=3.4.8
+pip install -i https://www.reportlab.com/pypi rlextra>=3.4.8

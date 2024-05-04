@@ -1,0 +1,214 @@
+{
+    "status": "draft",
+    "id": "Hgdl165-n",
+    "fund_name": "富由50指数每日更新",
+    "period": "2020年2月10日",
+
+    "keyfacts_title":"指数关键信息",
+    "index_makcap_title": "指数总市值",
+    "index_makcap": "\u00a51,0000",
+
+    "total_makcap_title":"成分股总市值",
+    "total_makcap": "\u00a51,00000",
+
+    "base_currency_title": "货币",
+    "base_currency": "人民币",
+
+    "full_name_title": "指数全称",
+    "full_name": "富由核心科创50指数",
+
+    "adjust_frequency_title":"调养频率",
+    "adjust_frequency": "每季度",
+
+    "launch_price_title":"基准值",
+    "launch_price": "1000",
+
+    "n_constituents_title":"样本股数量",
+    "n_constituents": "50",
+
+    "display_launch_date_title":"发布日期",
+    "display_launch_date": "01/01/2021",
+
+    "display_base_date_title":"基准日期",
+    "display_base_date": "10/01/2020",
+
+    "issuer_title":"发行机构",
+    "issuer": "富由集团",
+
+    "objectives_title":"指数构建目的",
+    "objectives": "随着市场的认可度不断攀升加之宏观政策的红利，科创版市场的投资价值逐渐显现，中国海外上市的科技及互联网题材个股表现优异，有望在将来回归A股市场，带来良好投资机遇，本指数致力于挖掘中国市场的优质科技主题个股行业主要布局但不限于创新医药，消费升级，电子，新材料，互联网等领域，构建拥抱科技，面向未来的核心资产股票池",
+
+    "logic_title":"指数构建逻辑",
+    "logic": "富由核心科创50指数以基本面分析结合量化因子计算为技术手段，从沪深A股中，依据行业景气度，企业基本面，动量因子等多维度，精选50只中具有成长潜力的高景气度个股;覆盖科技，医药，消费，金融，周期等多 个板块，以新兴科技产业为核心 ，全面挖掘A股中超额收益的机会 ，反映A股市场最具价值的一批个股的表现。",
+
+    "rev_volatility_title":"风险及收益",
+    "volatility_1y_title":"1年年化波动率",
+    "volatility_1y": "0.2",
+
+    "volatility_3m_title":"季度波动率",
+    "volatility_3m": "0.2",
+
+    "volatility_title":"年初至今波动率",
+    "volatility": "0.2",
+
+    "rev_1y_title":"1年年化收益率",
+    "rev_1y": "0.2",
+
+    "rev_3m_title":"季度收益率",
+    "rev_3m": "0.2",
+
+    "rev_title":"年初至今收益率",
+    "rev": "0.2",
+
+    "fundamentals_title":"基本面指标",
+    "pe_title":"滚动市盈率",
+    "pe": "0.2",
+
+    "pb_title":"滚动市净率",
+    "pb": "0.2",
+
+    "div_title":"股息率",
+    "div": "0.2",
+
+    "roe_title":"净资产收益率",
+    "roe": "0.2",
+
+    "leverage_title":"杠杆率",
+    "leverage": "0.2",
+
+    "sharpe_title":"夏普比率",
+    "sharpe": "0.2",
+
+    "sector_title":"风格策略分布",
+    "sector_breakdown": [
+        
+        {
+            "name": "大盘成长",
+            "amount": "20"
+
+        },
+        {
+            "name": "大盘价值",
+            "amount": "40"
+
+
+        },
+        {
+            
+            "name": "中盘成长",
+            "amount": "25"
+
+
+        },
+        {
+            
+            "name": "中盘价值",
+            "amount": "5"
+ 
+
+        }
+
+    ],
+
+    "market_title":"风格策略分布",
+    "market_breakdown": [
+
+        {
+            "name": "深交所",
+            "amount": "20"
+
+        },
+        {
+            "name": "上交所",
+            "amount": "80"
+
+
+        }
+    ],
+    "performance_title":"指数走势",
+    "industry_distribution_title":"行业权重分布",
+    "holdings": [
+
+        {
+            "name": "创新医药",
+            "amount": "20"
+        },
+        {
+            "name": "新能源",
+            "amount": "20"
+
+        },
+        {
+            "name": "新材料",
+            "amount": "25"
+
+        },
+        {
+
+            "name": "互联网及软件服务",
+            "amount": "5"
+
+        },
+        {
+            "name": "半导体",
+            "amount": "5"
+        },
+        {
+            "name": "电子",
+            "amount": "5"
+        },
+        {
+            "name": "教育",
+            "amount": "5"
+
+        },
+        {
+            "name": "金融",
+            "amount": "5"
+
+        }
+    ],
+    "top_holdings_title":"前十大持仓",
+    "top_holdings": [
+        
+        {
+            "name": "创新医药",
+            "amount": "20"
+        },
+        {
+            "name": "新能源",
+            "amount": "20"
+
+        },
+        {
+            "name": "新材料",
+            "amount": "25"
+
+        },
+        {
+            
+            "name": "互联网及软件服务",
+            "amount": "5"
+
+        },
+        {
+            "name": "半导体",
+            "amount": "5"
+        },
+        {
+            "name": "电子",
+            "amount": "5"
+        },
+        {
+            "name": "教育",
+            "amount": "5"
+
+        },
+        {
+            "name": "金融",
+            "amount": "5"
+
+        }
+    ]
+    
+}
