@@ -1,0 +1,1382 @@
+2021-03-24 17:48:42.6537882021-03-24 17:48:42.614429: Traceback (most recent call last):
+  File "app.py", line 26, in get_financing_news
+    t = int(request.form["base_date"])
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\werkzeug\datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.HTTPException.wrap.<locals>.newcls: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+2021-03-24 17:50:03.3059272021-03-24 17:50:03.304924: Traceback (most recent call last):
+  File "app.py", line 27, in get_financing_news
+    t = int(request.form["base_date"])
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\werkzeug\datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.HTTPException.wrap.<locals>.newcls: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+2021-03-24 17:51:05.0342822021-03-24 17:51:05.033283: Traceback (most recent call last):
+  File "app.py", line 27, in get_financing_news
+    t = request.form["base_date"]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\werkzeug\datastructures.py", line 442, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.HTTPException.wrap.<locals>.newcls: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+2021-03-24 17:53:08.4210132021-03-24 17:53:08.372704: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1278, in _get_socket
+    sock_info = self.sockets.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 35, in get_financing_news
+    N = News()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 18, in __init__
+    self.df = self.clean_event()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 68, in clean_event
+    query=[], sort_item='', n=0)
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 41, in read_mongo
+    for single_item in cursor:
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1124, in _refresh
+    self.__send_message(q)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1001, in __send_message
+    address=self.__address)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1372, in _run_operation_with_response
+    exhaust=exhaust)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1465, in _retryable_read
+    exhaust=exhaust) as (sock_info,
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1309, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1247, in _get_socket
+    self.__all_credentials, checkout=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1231, in get_socket
+    sock_info = self._get_socket(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1281, in _get_socket
+    sock_info = self.connect(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1197, in connect
+    sock_info.check_auth(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 793, in check_auth
+    self.authenticate(credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 593, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\network.py", line 161, in command
+    parse_write_concern_error=parse_write_concern_error)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\helpers.py", line 160, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'code': 18, 'errmsg': 'Authentication failed.'}
+
+2021-03-24 17:54:00.4180412021-03-24 17:54:00.416036: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1278, in _get_socket
+    sock_info = self.sockets.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 35, in get_financing_news
+    N = News()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 18, in __init__
+    self.df = self.clean_event()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 68, in clean_event
+    query=[], sort_item='', n=0)
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 41, in read_mongo
+    for single_item in cursor:
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1124, in _refresh
+    self.__send_message(q)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1001, in __send_message
+    address=self.__address)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1372, in _run_operation_with_response
+    exhaust=exhaust)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1465, in _retryable_read
+    exhaust=exhaust) as (sock_info,
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1309, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1247, in _get_socket
+    self.__all_credentials, checkout=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1231, in get_socket
+    sock_info = self._get_socket(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1281, in _get_socket
+    sock_info = self.connect(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1197, in connect
+    sock_info.check_auth(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 793, in check_auth
+    self.authenticate(credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 593, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\network.py", line 161, in command
+    parse_write_concern_error=parse_write_concern_error)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\helpers.py", line 160, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'code': 18, 'errmsg': 'Authentication failed.'}
+
+2021-03-24 17:54:12.9961972021-03-24 17:54:12.995015: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1278, in _get_socket
+    sock_info = self.sockets.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 35, in get_financing_news
+    N = News()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 18, in __init__
+    self.df = self.clean_event()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 68, in clean_event
+    query=[], sort_item='', n=0)
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 41, in read_mongo
+    for single_item in cursor:
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1124, in _refresh
+    self.__send_message(q)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1001, in __send_message
+    address=self.__address)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1372, in _run_operation_with_response
+    exhaust=exhaust)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1465, in _retryable_read
+    exhaust=exhaust) as (sock_info,
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1309, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1247, in _get_socket
+    self.__all_credentials, checkout=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1231, in get_socket
+    sock_info = self._get_socket(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1281, in _get_socket
+    sock_info = self.connect(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1197, in connect
+    sock_info.check_auth(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 793, in check_auth
+    self.authenticate(credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 593, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\network.py", line 161, in command
+    parse_write_concern_error=parse_write_concern_error)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\helpers.py", line 160, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'code': 18, 'errmsg': 'Authentication failed.'}
+
+2021-03-24 17:55:31.8440252021-03-24 17:55:31.842021: Traceback (most recent call last):
+  File "app.py", line 30, in get_financing_news
+    y = int(t/10000)
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+2021-03-24 17:56:08.8874662021-03-24 17:56:08.883481: Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1278, in _get_socket
+    sock_info = self.sockets.popleft()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 32, in get_financing_news
+    N = News(today=datetime.datetime(y, m, d))
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 18, in __init__
+    self.df = self.clean_event()
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 68, in clean_event
+    query=[], sort_item='', n=0)
+  File "E:\Work\cyzone_news\generate\generate_news.py", line 41, in read_mongo
+    for single_item in cursor:
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1124, in _refresh
+    self.__send_message(q)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\cursor.py", line 1001, in __send_message
+    address=self.__address)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1372, in _run_operation_with_response
+    exhaust=exhaust)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1465, in _retryable_read
+    exhaust=exhaust) as (sock_info,
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1309, in _slaveok_for_server
+    with self._get_socket(server, session, exhaust=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\mongo_client.py", line 1247, in _get_socket
+    self.__all_credentials, checkout=exhaust) as sock_info:
+  File "C:\Program Files\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1231, in get_socket
+    sock_info = self._get_socket(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1281, in _get_socket
+    sock_info = self.connect(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 1197, in connect
+    sock_info.check_auth(all_credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 793, in check_auth
+    self.authenticate(credentials)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 593, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\network.py", line 161, in command
+    parse_write_concern_error=parse_write_concern_error)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\pymongo\helpers.py", line 160, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'code': 18, 'errmsg': 'Authentication failed.'}
+
+2021-03-25 11:46:29.1819912021-03-25 11:46:29.181991: Traceback (most recent call last):
+  File "app.py", line 30, in get_financing_news
+    RN =ReadNews(update_date=t)
+NameError: name 'ReadNews' is not defined
+
+2021-03-25 11:48:09.4779882021-03-25 11:48:09.450062: Traceback (most recent call last):
+  File "app.py", line 33, in get_financing_news
+    response = json.dumps(ret, ensure_ascii=False)
+  File "D:\anconda\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "D:\anconda\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\anconda\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\anconda\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable
+
+2021-03-25 17:58:44.3598672021-03-25 17:58:44.352895: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'update_date'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 51, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 61, in hist
+    dates = list(df['update_date'])
+  File "D:\anconda\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'update_date'
+
+2021-03-25 18:11:50.0457732021-03-25 18:11:50.044775: Traceback (most recent call last):
+  File "app.py", line 30, in get_financing_news
+    RN =ReadNews(update_date=t)
+TypeError: __init__() missing 1 required positional argument: 'page'
+
+2021-03-25 18:11:53.2013072021-03-25 18:11:53.200310: Traceback (most recent call last):
+  File "app.py", line 30, in get_financing_news
+    RN =ReadNews(update_date=t)
+TypeError: __init__() missing 1 required positional argument: 'page'
+
+2021-03-25 18:12:25.0025032021-03-25 18:12:25.002503: Traceback (most recent call last):
+  File "app.py", line 30, in get_financing_news
+    RN =ReadNews(update_date=t)
+TypeError: __init__() missing 1 required positional argument: 'page'
+
+2021-03-25 18:15:41.9256262021-03-25 18:15:41.925626: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:16:21.5861682021-03-25 18:16:21.586168: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:16:27.9533432021-03-25 18:16:27.952343: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:17:16.5757172021-03-25 18:17:16.575717: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:17:55.6321972021-03-25 18:17:55.631200: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:18:05.0746552021-03-25 18:18:05.073658: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:18:30.2817232021-03-25 18:18:30.280725: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    h = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 64, in hist
+    if page>1:
+NameError: name 'page' is not defined
+
+2021-03-25 18:36:12.5315872021-03-25 18:36:12.531587: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    ret = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 73, in hist
+    return dict_ret
+UnboundLocalError: local variable 'dict_ret' referenced before assignment
+
+2021-03-25 18:36:16.3940992021-03-25 18:36:16.394099: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    ret = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 73, in hist
+    return dict_ret
+UnboundLocalError: local variable 'dict_ret' referenced before assignment
+
+2021-03-25 18:36:22.9264582021-03-25 18:36:22.926458: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    ret = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 73, in hist
+    return dict_ret
+UnboundLocalError: local variable 'dict_ret' referenced before assignment
+
+2021-03-25 18:36:35.6442592021-03-25 18:36:35.644259: Traceback (most recent call last):
+  File "app.py", line 53, in get_financing_news_hist
+    ret = RN.hist()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 73, in hist
+    return dict_ret
+UnboundLocalError: local variable 'dict_ret' referenced before assignment
+
+2021-03-26 10:08:28.9108772021-03-26 10:08:28.910877: Traceback (most recent call last):
+  File "app.py", line 47, in get_financing_news_hist
+    p = int(request.args.get("page"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:08:31.0712952021-03-26 10:08:31.071295: Traceback (most recent call last):
+  File "app.py", line 47, in get_financing_news_hist
+    p = int(request.args.get("page"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:20:07.1453962021-03-26 10:20:07.144398: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:20:12.5818172021-03-26 10:20:12.580788: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:22:16.6341222021-03-26 10:22:16.634122: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:22:19.5866392021-03-26 10:22:19.586639: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:24:01.4034302021-03-26 10:24:01.403430: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:24:20.8054752021-03-26 10:24:20.805475: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:26:14.8908572021-03-26 10:26:14.890857: Traceback (most recent call last):
+  File "app.py", line 25, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:27:24.2359562021-03-26 10:27:24.234953: Traceback (most recent call last):
+  File "app.py", line 26, in get_financing_news
+    p = int(request.args.get("page"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:27:43.3150032021-03-26 10:27:43.315003: Traceback (most recent call last):
+  File "app.py", line 26, in get_financing_news
+    p = int(request.args.get("page"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-26 10:29:07.0716392021-03-26 10:29:07.070641: Traceback (most recent call last):
+  File "app.py", line 26, in get_financing_news
+    p = int(request.args.get("page"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-03-30 13:49:38.4951572021-03-30 13:49:38.470188: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'summary'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:/python_zhoutianlian/cyzone_news/app.py", line 32, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 54, in read
+    'summary':df['summary'].values[0],
+  File "D:\anconda\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'summary'
+
+2021-03-30 13:50:02.0088812021-03-30 13:50:02.007857: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'summary'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:/python_zhoutianlian/cyzone_news/app.py", line 32, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 54, in read
+    'summary':df['summary'].values[0],
+  File "D:\anconda\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'summary'
+
+2021-03-30 13:50:30.8504332021-03-30 13:50:30.847445: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'summary'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 32, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 54, in read
+    'summary':df['summary'].values[0],
+  File "D:\anconda\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'summary'
+
+2021-03-30 13:50:46.4096502021-03-30 13:50:46.409650: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'summary'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 32, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\cyzone_news\generate\generate_news.py", line 54, in read
+    'summary':df['summary'].values[0],
+  File "D:\anconda\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\anconda\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'summary'
+
+2021-03-30 17:44:37.5672082021-03-30 17:44:37.566239: Traceback (most recent call last):
+  File "app.py", line 35, in get_financing_news
+    print(ret['highlight_summary'])
+KeyError: 'highlight_summary'
+
+2021-03-30 17:45:16.9014402021-03-30 17:45:16.901440: Traceback (most recent call last):
+  File "app.py", line 35, in get_financing_news
+KeyError: 'highlight_summary'
+
+2021-04-22 15:59:03.2285992021-04-22 15:59:03.227603: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 72, in read
+    for j in highlight:
+TypeError: 'int' object is not iterable
+
+2021-04-22 15:59:12.7142492021-04-22 15:59:12.714249: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 72, in read
+    for j in highlight:
+TypeError: 'int' object is not iterable
+
+2021-04-22 15:59:47.4733542021-04-22 15:59:47.472357: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 72, in read
+    for j in highlight:
+TypeError: 'int' object is not iterable
+
+2021-04-22 16:24:56.7878472021-04-22 16:24:56.783857: Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\urllib3\connection.py", line 170, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "D:\anconda\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "D:\anconda\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "D:\anconda\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\anconda\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\anconda\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\anconda\lib\site-packages\urllib3\connection.py", line 182, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001ACBF8C4748>: Failed to establish a new connection: [WinError 10060] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\anconda\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\anconda\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\anconda\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='aip.baidubce.com', port=443): Max retries exceeded with url: /oauth/2.0/token?grant_type=client_credentials&client_id=qPYe3aq3f3yfAE8h15YGU12h&client_secret=WanvzTjf4GVaG1mGsZWRhZHW1BdGl00r (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001ACBF8C4748>: Failed to establish a new connection: [WinError 10060] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 110, in get_audio
+    'per': 4
+  File "D:\anconda\lib\site-packages\aip\speech.py", line 92, in synthesis
+    result = self._request(self.__ttsUrl, data)
+  File "D:\anconda\lib\site-packages\aip\base.py", line 89, in _request
+    authObj = self._auth()
+  File "D:\anconda\lib\site-packages\aip\base.py", line 168, in _auth
+    ), proxies=self._proxies).json()
+  File "D:\anconda\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\anconda\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\anconda\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\anconda\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\anconda\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='aip.baidubce.com', port=443): Max retries exceeded with url: /oauth/2.0/token?grant_type=client_credentials&client_id=qPYe3aq3f3yfAE8h15YGU12h&client_secret=WanvzTjf4GVaG1mGsZWRhZHW1BdGl00r (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001ACBF8C4748>: Failed to establish a new connection: [WinError 10060] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓĞÕıÈ·´ğ¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓĞ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£'))
+
+2021-04-22 16:49:11.0649642021-04-22 16:49:11.064964: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 87, in read
+    theme = show_list[4].split('£º')[1]
+IndexError: list index out of range
+
+2021-04-22 16:49:15.5300042021-04-22 16:49:15.529007: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 87, in read
+    theme = show_list[4].split('£º')[1]
+IndexError: list index out of range
+
+2021-04-22 16:50:02.9353112021-04-22 16:50:02.935311: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 87, in read
+    theme = show_list[4].split('£º')[1]
+IndexError: list index out of range
+
+2021-04-22 16:51:59.2315042021-04-22 16:51:59.230506: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 60, in get_financing_news
+    ret = RN.read()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 74, in read
+    for j in highlight:
+TypeError: 'int' object is not iterable
+
+2021-04-23 17:57:23.3412922021-04-23 17:57:23.341292: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 128, in get_audio
+    if not os.lisdir(audio_path):
+AttributeError: module 'os' has no attribute 'lisdir'
+
+2021-04-23 18:00:33.2178382021-04-23 18:00:33.216840: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 128, in get_audio
+    if not os.lisdir(audio_path):
+AttributeError: module 'os' has no attribute 'lisdir'
+
+2021-04-23 18:01:09.2784642021-04-23 18:01:09.277466: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 128, in get_audio
+    if not os.lisdir(audio_path):
+AttributeError: module 'os' has no attribute 'lisdir'
+
+2021-04-23 18:01:41.658925D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-23 18:01:41.785608
+2021-04-23 18:03:37.694814D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-23 18:03:37.6958112021-04-23 18:03:37.695811: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 136, in get_audio
+    with open(audio_path + audio_name, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\python_zhoutianlian\\fuyou_flask/audio/audio_20210422.mp3'
+
+2021-04-23 18:04:04.340601D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-23 18:04:04.416399
+2021-04-23 18:04:56.7545242021-04-23 18:04:56.754524: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 128, in get_audio
+    if not os.lisdir(audio_path):
+AttributeError: module 'os' has no attribute 'lisdir'
+
+2021-04-23 18:05:33.0954002021-04-23 18:05:33.094403: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 128, in get_audio
+    if not os.isdir(audio_path):
+AttributeError: module 'os' has no attribute 'isdir'
+
+2021-04-23 18:07:07.6230472021-04-23 18:07:07.623047: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 61, in get_financing_news
+    audio_url = RN.get_audio()
+  File "D:\python_zhoutianlian\fuyou_flask\generate\generate_news.py", line 129, in get_audio
+    os.makedir(audio_path)
+AttributeError: module 'os' has no attribute 'makedir'
+
+2021-04-23 18:08:51.912984D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-23 18:08:52.019698
+2021-04-23 18:09:21.827037D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-23 18:09:21.943725
+2021-04-25 16:31:23.485626D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 16:31:23.789784
+2021-04-25 17:04:29.719392D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:04:29.827102
+2021-04-25 17:05:13.003712D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:05:13.110426
+2021-04-25 17:05:13.997055D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:05:14.093797
+2021-04-25 17:06:43.271466D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:06:43.369206
+2021-04-25 17:06:44.068336D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:06:44.168070
+2021-04-25 17:06:52.164723D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:06:52.260442
+2021-04-25 17:07:04.979452D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:07:05.090156
+2021-04-25 17:07:19.308158¡¾ÁªºÏÒ½Îñ¼¯ÍÅÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-25 17:07:22.917509D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:07:23.053178
+2021-04-25 17:07:26.183780D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:07:26.260575
+2021-04-25 17:07:36.166102¡¾ÁªºÏÒ½Îñ¼¯ÍÅÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-25 17:07:39.735587D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:07:39.807371
+2021-04-25 17:07:50.832905D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:07:50.905709
+2021-04-25 17:08:24.620605D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:08:24.691416
+2021-04-25 17:08:27.490933¡¾ÖĞ¹úÖĞµØÈéÒµ¿Ø¹ÉÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-25 17:10:43.323915D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:10:43.440602
+2021-04-25 17:10:44.348176D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-25 17:10:44.440928
+2021-04-26 13:36:50.994472D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:36:51.095204
+2021-04-26 13:37:00.614762D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:00.720479
+2021-04-26 13:37:08.224424D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:08.318174
+2021-04-26 13:37:18.188794D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:18.287530
+2021-04-26 13:37:25.278846D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:25.410494
+2021-04-26 13:37:32.322024D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:32.390839
+2021-04-26 13:37:40.118187D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:40.188998
+2021-04-26 13:37:47.276057D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:47.349859
+2021-04-26 13:37:54.933592D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:37:55.005400
+2021-04-26 13:38:04.413257D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:04.486062
+2021-04-26 13:38:13.514932D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:13.588735
+2021-04-26 13:38:16.984659D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:17.057465
+2021-04-26 13:38:26.276826D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:26.356612
+2021-04-26 13:38:34.494864D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:34.566672
+2021-04-26 13:38:41.988834D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:42.069619
+2021-04-26 13:38:52.045956D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:52.117764
+2021-04-26 13:38:54.526327D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:38:54.597138
+2021-04-26 13:39:00.825493D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:00.899295
+2021-04-26 13:39:03.301874D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:03.372685
+2021-04-26 13:39:08.754302D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:08.826110
+2021-04-26 13:39:13.819764D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:13.890575
+2021-04-26 13:39:20.349314D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:20.426109
+2021-04-26 13:39:33.756482D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:33.826296
+2021-04-26 13:39:49.527335D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:39:49.598145
+2021-04-26 13:40:09.342378D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:40:09.416181
+2021-04-26 13:40:19.644845D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:40:19.717651
+2021-04-26 13:40:36.523736D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:40:36.601528
+2021-04-26 13:40:48.272335D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:40:48.341151
+2021-04-26 13:41:01.981697D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:41:02.053505
+2021-04-26 13:41:16.259538D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:41:16.338329
+2021-04-26 13:41:27.817649¡¾ĞÂºè»ùÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 13:41:33.221207D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:41:33.294013
+2021-04-26 13:41:45.646999D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:41:45.719804
+2021-04-26 13:41:54.396615D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:41:54.485378
+2021-04-26 13:42:05.993621D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:42:06.068422
+2021-04-26 13:42:17.792090D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:42:17.864895
+2021-04-26 13:42:30.723530D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:42:30.794340
+2021-04-26 13:42:42.370403D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:42:42.440216
+2021-04-26 13:42:53.475723D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:42:53.546535
+2021-04-26 13:43:04.299795D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:04.369609
+2021-04-26 13:43:13.156126D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:13.225940
+2021-04-26 13:43:25.551998D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:25.623806
+2021-04-26 13:43:35.090506D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:35.164309
+2021-04-26 13:43:47.225075D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:47.295886
+2021-04-26 13:43:57.542501D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:43:57.616304
+2021-04-26 13:44:05.377562D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:05.447375
+2021-04-26 13:44:14.453308D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:14.525115
+2021-04-26 13:44:23.768411D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:23.839222
+2021-04-26 13:44:32.345772D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:32.417580
+2021-04-26 13:44:40.835084D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:40.906892
+2021-04-26 13:44:42.281220D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:42.351032
+2021-04-26 13:44:49.483970D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:44:49.556774
+2021-04-26 13:45:00.939354D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:01.197664
+2021-04-26 13:45:12.469540D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:12.556307
+2021-04-26 13:45:24.438551D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:24.811554
+2021-04-26 13:45:36.980033D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:37.051842
+2021-04-26 13:45:47.817071D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:47.888879
+2021-04-26 13:45:54.126209D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:45:54.196023
+2021-04-26 13:46:03.563987D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:03.638786
+2021-04-26 13:46:13.958207D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:14.195574
+2021-04-26 13:46:18.398341D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:18.473141
+2021-04-26 13:46:23.701169D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:23.882685
+2021-04-26 13:46:32.818802D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:32.890609
+2021-04-26 13:46:42.583704D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:42.657507
+2021-04-26 13:46:51.478932D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:46:51.553731
+2021-04-26 13:47:02.583254D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:02.662044
+2021-04-26 13:47:06.293340D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:06.364150
+2021-04-26 13:47:14.325872D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:14.396682
+2021-04-26 13:47:20.862404D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:20.935207
+2021-04-26 13:47:26.515295D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:26.595082
+2021-04-26 13:47:30.852703¡¾ÂÌÒ¶ÖÆÒ©¼¯ÍÅÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 13:47:32.362668D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:32.434475
+2021-04-26 13:47:33.583405D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:34.000291
+2021-04-26 13:47:43.113935D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:43.185742
+2021-04-26 13:47:57.679009D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:47:57.925350
+2021-04-26 13:48:13.648329D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:48:13.738092
+2021-04-26 13:48:26.943797D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:48:27.013610
+2021-04-26 13:48:39.818389D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:48:39.892192
+2021-04-26 13:48:52.479551D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:48:52.550362
+2021-04-26 13:49:00.181966D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:00.254772
+2021-04-26 13:49:11.581501D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:11.657298
+2021-04-26 13:49:21.319475D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:21.395272
+2021-04-26 13:49:35.220324D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:35.300111
+2021-04-26 13:49:46.255832D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:46.330632
+2021-04-26 13:49:58.138075D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:49:58.207889
+2021-04-26 13:50:11.324833D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:11.397639
+2021-04-26 13:50:18.141615D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:18.256308
+2021-04-26 13:50:30.284351D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:30.374111
+2021-04-26 13:50:38.326857D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:38.397668
+2021-04-26 13:50:46.530931D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:46.613710
+2021-04-26 13:50:56.331738D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:50:56.401552
+2021-04-26 13:51:09.006606D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:09.090381
+2021-04-26 13:51:18.203028D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:18.276829
+2021-04-26 13:51:28.495520D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:28.565333
+2021-04-26 13:51:37.702912D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:37.775718
+2021-04-26 13:51:45.875072D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:45.944885
+2021-04-26 13:51:56.214155D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:56.285963
+2021-04-26 13:51:58.848116D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:51:58.919924
+2021-04-26 13:52:01.059206D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:52:01.131015
+2021-04-26 13:52:09.682162D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:52:09.822786
+2021-04-26 13:52:25.837984D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:52:25.907798
+2021-04-26 13:52:39.678994D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:52:39.768755
+2021-04-26 13:52:57.536271D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:52:57.615059
+2021-04-26 13:53:12.815412¡¾Ïã¸Û½»Ò×¼°½áËãËùÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 13:53:15.267857D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:53:15.348644
+2021-04-26 13:53:31.325941¡¾Ïã¸Û½»Ò×¼°½áËãËùÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 13:53:33.680648D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:53:33.775395
+2021-04-26 13:53:47.435887D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:53:47.522656
+2021-04-26 13:53:59.679168D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:53:59.777904
+2021-04-26 13:54:11.742925D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:54:11.824706
+2021-04-26 13:54:23.432683D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:54:23.533416
+2021-04-26 13:54:32.990141D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:54:33.530696
+2021-04-26 13:54:42.344142D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:54:42.423929
+2021-04-26 13:54:53.628983D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:54:53.705777
+2021-04-26 13:55:02.285846D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:02.372614
+2021-04-26 13:55:12.908458D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:13.067033
+2021-04-26 13:55:22.656407D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:22.957600
+2021-04-26 13:55:28.540679D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:28.667341
+2021-04-26 13:55:39.782636D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:39.861424
+2021-04-26 13:55:48.491085D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:48.574862
+2021-04-26 13:55:58.051249D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:55:58.134028
+2021-04-26 13:56:07.161900D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:07.244680
+2021-04-26 13:56:17.407518D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:17.484313
+2021-04-26 13:56:28.837970D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:28.915763
+2021-04-26 13:56:32.210955D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:32.300716
+2021-04-26 13:56:40.008798D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:40.097560
+2021-04-26 13:56:48.352499D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:48.435277
+2021-04-26 13:56:55.188230D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:56:55.439558
+2021-04-26 13:57:03.330469D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:57:03.421227
+2021-04-26 13:57:21.380230D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:57:21.473979
+2021-04-26 13:57:37.469231D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:57:37.545029
+2021-04-26 13:57:50.444554D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:57:50.629061
+2021-04-26 13:58:04.233702D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:04.301521
+2021-04-26 13:58:15.492612D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:15.567413
+2021-04-26 13:58:27.518472D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:27.591278
+2021-04-26 13:58:38.937953D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:39.008764
+2021-04-26 13:58:45.966170D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:46.046954
+2021-04-26 13:58:56.570828D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:58:56.640642
+2021-04-26 13:59:07.822757D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:07.892570
+2021-04-26 13:59:18.935059D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:19.006867
+2021-04-26 13:59:30.019436D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:30.098225
+2021-04-26 13:59:37.951237D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:38.022048
+2021-04-26 13:59:49.256025D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:49.326835
+2021-04-26 13:59:54.762309D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 13:59:54.839103
+2021-04-26 14:00:04.799484D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:04.874284
+2021-04-26 14:00:13.859273D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:13.931080
+2021-04-26 14:00:22.502173D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:22.571986
+2021-04-26 14:00:33.926641D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:34.005429
+2021-04-26 14:00:44.489412D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:44.560221
+2021-04-26 14:00:51.289237D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:51.359051
+2021-04-26 14:00:57.911541D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:00:57.980357
+2021-04-26 14:01:02.272883¡¾¸ß¿ÆÇÅ¹âµ¼¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:01:03.925467D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:03.997275
+2021-04-26 14:01:12.871558D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:12.945361
+2021-04-26 14:01:22.662391D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:22.732204
+2021-04-26 14:01:31.498777D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:31.569586
+2021-04-26 14:01:35.034327D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:35.113116
+2021-04-26 14:01:37.510709D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:37.591493
+2021-04-26 14:01:51.599058D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:01:51.670865
+2021-04-26 14:02:04.337015D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:02:04.409821
+2021-04-26 14:02:16.281093D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:02:16.439669
+2021-04-26 14:02:27.863139D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:02:27.932953
+2021-04-26 14:02:39.326503D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:02:39.400306
+2021-04-26 14:02:50.293194D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:02:50.365002
+2021-04-26 14:03:00.615607D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:00.696390
+2021-04-26 14:03:11.471593D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:11.545396
+2021-04-26 14:03:21.274395D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:21.347201
+2021-04-26 14:03:29.783654D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:29.854465
+2021-04-26 14:03:33.745067¡¾¶«Åô¿Ø¹É¹É·İÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:03:39.717106D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:39.787918
+2021-04-26 14:03:48.390925D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:48.461736
+2021-04-26 14:03:52.751272D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:03:52.823080
+2021-04-26 14:04:00.268182D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:00.338993
+2021-04-26 14:04:08.322656D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:08.395461
+2021-04-26 14:04:13.935656D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:14.007463
+2021-04-26 14:04:21.172315D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:21.241130
+2021-04-26 14:04:31.441869D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:31.514674
+2021-04-26 14:04:41.431172D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:41.501983
+2021-04-26 14:04:46.721036D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:46.799824
+2021-04-26 14:04:52.207372D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:52.282172
+2021-04-26 14:04:54.590005D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:54.660815
+2021-04-26 14:04:56.737265D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:56.908807
+2021-04-26 14:04:57.977950¡¾µÂÀû»úĞµ¿Ø¹ÉÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:04:59.146826D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:04:59.222623
+2021-04-26 14:05:00.776470D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:00.846284
+2021-04-26 14:05:02.311369D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:02.384174
+2021-04-26 14:05:08.350229D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:08.421041
+2021-04-26 14:05:21.264715D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:21.336523
+2021-04-26 14:05:35.635309D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:35.704125
+2021-04-26 14:05:49.956036D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:50.033828
+2021-04-26 14:05:58.042424D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:05:58.113235
+2021-04-26 14:06:09.714231D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:06:09.784044
+2021-04-26 14:06:20.855456D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:06:20.931253
+2021-04-26 14:06:33.061833D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:06:33.134639
+2021-04-26 14:06:44.098338D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:06:44.171143
+2021-04-26 14:06:54.463637D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:06:54.538438
+2021-04-26 14:07:06.989161D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:07.057977
+2021-04-26 14:07:17.781318D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:17.851132
+2021-04-26 14:07:27.162248D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:27.234056
+2021-04-26 14:07:35.052161D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:35.124967
+2021-04-26 14:07:43.416806D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:43.486620
+2021-04-26 14:07:52.599267D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:07:52.670076
+2021-04-26 14:08:00.725548D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:00.797356
+2021-04-26 14:08:05.542674D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:05.611490
+2021-04-26 14:08:13.204199D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:13.278001
+2021-04-26 14:08:23.366040D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:23.438845
+2021-04-26 14:08:32.084739D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:32.152558
+2021-04-26 14:08:39.571729D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:39.642540
+2021-04-26 14:08:47.733915D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:47.806721
+2021-04-26 14:08:55.662725D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:55.730544
+2021-04-26 14:08:59.544352D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:08:59.612171
+2021-04-26 14:09:07.540981D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:07.615781
+2021-04-26 14:09:15.150643D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:15.220456
+2021-04-26 14:09:22.024274D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:22.095084
+2021-04-26 14:09:27.706088D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:27.775901
+2021-04-26 14:09:28.540857¡¾TCLÍ¨Ñ¶¿Æ¼¼¿Ø¹ÉÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:09:33.974336D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:34.047142
+2021-04-26 14:09:45.933375D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:46.006180
+2021-04-26 14:09:54.187316D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:09:54.266105
+2021-04-26 14:10:05.023355D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:10:05.095164
+2021-04-26 14:10:16.945493D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:10:17.016304
+2021-04-26 14:10:28.419828D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:10:28.488643
+2021-04-26 14:10:38.496896D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:10:38.568704
+2021-04-26 14:10:50.580601D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:10:50.651413
+2021-04-26 14:11:02.446888D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:02.517699
+2021-04-26 14:11:09.224774D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:09.298578
+2021-04-26 14:11:20.268261D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:20.340069
+2021-04-26 14:11:31.613938D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:31.686743
+2021-04-26 14:11:41.780767D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:41.851577
+2021-04-26 14:11:53.915337D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:11:53.984153
+2021-04-26 14:12:01.377394D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:01.451197
+2021-04-26 14:12:08.834464D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:08.907270
+2021-04-26 14:12:14.139287D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:14.211095
+2021-04-26 14:12:21.482662D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:21.557462
+2021-04-26 14:12:29.321711D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:29.396512
+2021-04-26 14:12:37.933695D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:38.005504
+2021-04-26 14:12:44.173020D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:44.244829
+2021-04-26 14:12:50.990799D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:51.060613
+2021-04-26 14:12:59.114090D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:12:59.186895
+2021-04-26 14:13:03.171247D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:03.251033
+2021-04-26 14:13:09.585105D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:09.657911
+2021-04-26 14:13:16.583402D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:16.654213
+2021-04-26 14:13:22.809762D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:22.882567
+2021-04-26 14:13:28.448691D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:28.518506
+2021-04-26 14:13:34.809693D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:34.882497
+2021-04-26 14:13:36.295720¡¾Àû·áÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:13:43.580252D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:43.649067
+2021-04-26 14:13:44.743144¡¾Àû·áÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:13:50.787989D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:13:50.866780
+2021-04-26 14:14:03.826144D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:14:03.896954
+2021-04-26 14:14:16.593023D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:14:16.666826
+2021-04-26 14:14:28.655785D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:14:28.726596
+2021-04-26 14:14:40.411368D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:14:40.482178
+2021-04-26 14:14:52.317547D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:14:52.390353
+2021-04-26 14:15:04.060165D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:04.135962
+2021-04-26 14:15:14.514228D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:14.585038
+2021-04-26 14:15:24.180393D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:24.252201
+2021-04-26 14:15:33.441642D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:33.519433
+2021-04-26 14:15:43.836860D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:43.909665
+2021-04-26 14:15:52.640333D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:15:52.717127
+2021-04-26 14:16:01.242343D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:01.317144
+2021-04-26 14:16:14.263543D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:14.333356
+2021-04-26 14:16:23.637492D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:23.713290
+2021-04-26 14:16:29.833931¡¾Ïã¸ÛĞËÒµ¹ú¼Ê¼¯ÍÅÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-26 14:16:31.390770D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:31.460583
+2021-04-26 14:16:42.027343D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:42.098154
+2021-04-26 14:16:53.523619D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:53.594429
+2021-04-26 14:16:58.264948D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:16:58.334761
+2021-04-26 14:17:07.523204D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:07.596009
+2021-04-26 14:17:14.151490D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:14.225292
+2021-04-26 14:17:22.757489D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:22.833287
+2021-04-26 14:17:31.000461D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:31.070273
+2021-04-26 14:17:39.462844D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:39.534654
+2021-04-26 14:17:48.634332D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:48.701154
+2021-04-26 14:17:52.260641D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:17:52.331452
+2021-04-26 14:18:00.352017D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:00.421829
+2021-04-26 14:18:05.914152D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:05.984962
+2021-04-26 14:18:12.671093D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:12.745894
+2021-04-26 14:18:19.506824D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:19.577635
+2021-04-26 14:18:29.627776D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:29.698586
+2021-04-26 14:18:40.486754D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:40.557566
+2021-04-26 14:18:46.257332D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:46.328143
+2021-04-26 14:18:51.916208D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:18:51.994000
+2021-04-26 14:19:00.621943D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:19:00.692753
+2021-04-26 14:19:11.374206D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:19:11.446015
+2021-04-26 14:19:18.713591D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:19:18.783404
+2021-04-26 14:19:24.430313D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:19:24.515087
+2021-04-26 14:19:31.211190D:\python_zhoutianlian\fuyou_flask/audio/
+2021-04-26 14:19:31.280007
+2021-04-28 09:22:15.816108¡¾TCL¶àÃ½Ìå¿Æ¼¼¿Ø¹ÉÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-04-28 09:22:15.981665¡¾TCLÍ¨Ñ¶¿Æ¼¼¿Ø¹ÉÓĞÏŞ¹«Ë¾¡¿µÄÌí¼Ó¹«Ë¾ÓĞÎó
+2021-05-12 14:40:16.490428D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-12 14:40:16.606117
+2021-05-12 14:41:37.302482D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-12 14:41:37.412160
+2021-05-12 14:44:25.266173D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-12 14:44:25.362887
+2021-05-12 14:47:06,578 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-12 14:48:17.9419972021-05-12 14:48:17.941001: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 26, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-05-12 14:48:17,941 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 14:48:17] "[37mGET /news/financingnews HTTP/1.1[0m" 200 -
+2021-05-12 14:48:51.1412712021-05-12 14:48:51.140274: Traceback (most recent call last):
+  File "D:/python_zhoutianlian/fuyou_flask/app.py", line 26, in get_financing_news
+    t = int(request.args.get("date"))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+2021-05-12 14:48:51,141 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 14:48:51] "[37mGET /news/financingnews HTTP/1.1[0m" 200 -
+2021-05-12 14:50:14.837777{"summary": {"content": "2021Äê5ÔÂ12ÈÕ£¬×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼ş£¬ÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª£¬ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª£¬ÈÈµã°å¿é¹Ø×¢£ºÒ½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ", "highlight": ["23Æğ", "45.66ÒÚÔª", "386.57ÒÚÔª"]}, "cases": [{"content": "\n                2021Äê5ÔÂ11ÈÕ,Moonalpha»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃ×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚºìÉ¼×Ê±¾ÖĞ¹ú,BAI£¨±´ËşË¹ÂüÑÇÖŞÍ¶×Ê»ù½ğ£©,Tiger GlobalµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.65ÒÚÔª¡£Babel±´±¦³ÉÁ¢ÓÚ2018Äê1ÔÂ1ÈÕ£¬¶¨Î»Êı×Ö»õ±ÒÖ§¸¶ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊı×Ö»õ±ÒÒøĞĞ£¬Éæ¼°Çø¿éÁ´,Êı×Ö»õ±Ò,Êı×Ö»õ±ÒÖ§¸¶µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Moonalpha", "2.59ÒÚÔª", "2.65ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê£¬Òı·¢¿§·È²èÒûÆ·ÅÆĞĞÒµÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ´´ĞÂ¹¤³¡µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.96Ç§ÍòÔª¡£Á¬¿§·ÈÁãÊÛ³ÉÁ¢ÓÚ2019Äê8ÔÂ30ÈÕ£¬¶¨Î»¿§·È²èÒûÆ·ÅÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÔ¤°ü×°¿§·ÈÁãÊÛÆ·ÅÆ£¬Éæ¼°Ïû·Ñ,Ê³,¿§·È²èÒûÆ·ÅÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.96Ç§ÍòÔª", "1.96Ç§ÍòÔª", "263637"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬»ñµÃ½ÌÓıO2OĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ±±¾©°Ù¼ÒÊÓÁª¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÌÒÀî×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.31Ç§ÍòÔª¡£Ğ£³¤°î³ÉÁ¢ÓÚ2011Äê2ÔÂ25ÈÕ£¬¶¨Î»½ÌÓıO2OĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÖ÷´òO2OÉç½»Óë×ÊÔ´ÕûºÏµÄ½ÌÓıĞĞÒµ·şÎñÆ½Ì¨£¬Éæ¼°Éú»î·şÎñ,O2O,½ÌÓıO2OµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "3.31Ç§ÍòÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê£¬»ñµÃÍ¨ÓÃsaasĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÈíÒøÔ¸¾°»ù½ğ,¸ßÊ¢ÖĞ¹ú,´º»ª×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê27.75ÒÚÔª¡£±±É­ÔÆ³ÉÁ¢ÓÚ2005Äê5ÔÂ17ÈÕ£¬¶¨Î»Í¨ÓÃsaasĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ»Ìå»¯ÈË²Å¹ÜÀíÔÆÆ½Ì¨¹©Ó¦ÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,SAAS,Í¨ÓÃsaasµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾", "16.82ÒÚÔª", "27.75ÒÚÔª", "263551"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¹ú¼ÒµçÍ¶,±±±ä×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.01Ç§ÍòÔª¡£Æû³µĞÇÇò³ÉÁ¢ÓÚ2014Äê11ÔÂ24ÈÕ£¬¶¨Î»Æû³µ½»Í¨ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÆû³µĞÅÏ¢½»Á÷ÉçÇø£¬Éæ¼°Æû³µ½»Í¨,Æû³µ½»Ò×,Æû³µĞĞÒµĞÅÏ¢»¯µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.01Ç§ÍòÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¶¦êÍÍ¶×Ê,Ææ¼¨´´Ì³,Ò©Ã÷¿µµÂµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.00Ç§ÍòÔª¡£´óÏğ¿Æ¼¼³ÉÁ¢ÓÚ2018Äê11ÔÂ13ÈÕ£¬¶¨Î»Ğ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÈËÌåÆ÷¹ÙĞ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,¼¯³ÉµçÂ·,Ğ¾Æ¬,Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼ÊõµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "4.00Ç§ÍòÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê£¬»ñµÃ¹ã¸æÓªÏúĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚMirae Asset,½İ³ÉÊÀ¼Í,¹úÍ¶´´ÒæµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.45ÒÚÔª¡£ÌİÓ°´«Ã½³ÉÁ¢ÓÚ2017Äê3ÔÂ22ÈÕ£¬¶¨Î»¹ã¸æÓªÏúĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÉÌÎñÂ¥ÓîĞ§¹ûÃ½ÌåÔËÓªÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,ÍÆ¹ãÓªÏú,¹ã¸æÓªÏúµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "4.45ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÈ«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞÂË¿Â·½ğ¿Ø,ÉÏº£¾ıÊµÉúÎïÒ½Ò©¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.00ÒÚÔª¡£°¬ÃÀì³³ÉÁ¢ÓÚ2016Äê10ÔÂ10ÈÕ£¬¶¨Î»ÉúÎïÖÆÒ©ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃâÒßµ÷½Ú´´ĞÂÒ©ÎïÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼Êõ,ÉúÎïÖÆÒ©µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "2.00ÒÚÔª", "2.00ÒÚÔª", "259603"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê£¬Òı·¢×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.27ÒÚÔª¡£´¨Íø´«Ã½³ÉÁ¢ÓÚ2009Äê12ÔÂ23ÈÕ£¬¶¨Î»ÎÄ»¯ÓéÀÖĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃ½Ìå×ÊÑ¶ÀàĞÂÃ½ÌåÆ½Ì¨£¬Éæ¼°ÎÄ»¯ÓéÀÖ,Ã½Ìå,ĞÂÃ½ÌåµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "2.27ÒÚÔª", "2.27ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê£¬ÊÕµ½È«ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ°Ù¶È·çÍ¶,ÀÊÂê·å´´Í¶,¶¦ĞÄ×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê5.50Ç§ÍòÔª¡£ÌÇ¼ªÒ½ÁÆ³ÉÁ¢ÓÚ2016Äê8ÔÂ11ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª´úĞ»¼²²¡Ò½ÁÆÆ÷ĞµÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "5.50Ç§ÍòÔª", "5.50Ç§ÍòÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÎïÁªÍøĞ¾Æ¬ĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÍ¬´´Î°Òµ,¶«·½¸»º£µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.50ÒÚÔª¡£ºËĞ¾»¥Áª³ÉÁ¢ÓÚ2017Äê6ÔÂ14ÈÕ£¬¶¨Î»ÎïÁªÍøĞ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊıÄ£»ìºÏĞÅºÅÁ´Ğ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÎïÁªÍø,ÎïÁªÍøÓ²¼ş,ÎïÁªÍøĞ¾Æ¬µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.00ÒÚÔª", "1.50ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê£¬ÊÕµ½Ò½ÁÆ½¡¿µĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¼Ã·å×Ê±¾,¹úÍ¶´´ºÏ,½¨·¢¹É·İµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.00ÒÚÔª¡£ÕéÒÚÒ½ÁÆ³ÉÁ¢ÓÚ2019Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª½á¹¹ĞÔĞÄÔà²¡Ò½ÁÆÆóÒµ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.00ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê£¬Òı·¢ÒµÄÚÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê10.25ÒÚÔª¡£»ªÍ¨ÏßÀÂ³ÉÁ¢ÓÚ2002Äê6ÔÂ21ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªµçÀÂÖÆÔìÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,µçÆøÉè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "3.84ÒÚÔª", "10.25ÒÚÔª", "23620"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê£¬»ñµÃÒ½ÁÆÆ÷ĞµĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ½­ËÕÓãÔ¾Ò½ÁÆÉè±¸¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.96ÒÚÔª¡£¿­Á¢ÌØÒ½ÁÆ³ÉÁ¢ÓÚ2010Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆÆ÷ĞµĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ½ÁÆ½¡¿µÓ²¼şÑĞ·¢ÖÆÔì£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾", "3.66ÒÚÔª", "4.96ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê£¬ÊÕµ½ÖÇÄÜÖÆÔìĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.53ÒÚÔª¡£Ñ¸½İĞË³ÉÁ¢ÓÚ2005Äê8ÔÂ19ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÓ¡ÖÆµçÂ·°åÉú²úÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾", "2.53ÒÚÔª", "2.53ÒÚÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê£¬Òı·¢È«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞË¸»Í¶×Ê,±±¼«¹â´´Í¶µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.00Ç§ÍòÔª¡£°¬¿Ï¹¤Òµ³ÉÁ¢ÓÚ2007Äê4ÔÂ10ÈÕ£¬¶¨Î»ÄÜÔ´·şÎñĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÕôÆû½ÚÄÜÉè±¸ÖÆÔìÓëÈÈÄÜ¹ÜÀí½â¾ö·½°¸Ìá¹©ÉÌ£¬Éæ¼°ÄÜÔ´µçÁ¦,ÄÜÔ´·şÎñ,ÄÜÔ´¹ÜÀí,ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸,Êı×Ö»¯ / ÖÇÄÜ»¯×ªĞÍµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.00Ç§ÍòÔª", "0"]}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê£¬ÊÕµ½ÒµÄÚÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚË®Ä¾´´Í¶,ÆôµÏÖ®ĞÇ,³ĞÊ÷Í¶×ÊµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.70ÒÚÔª¡£Èü¸£»ùÒò³ÉÁ¢ÓÚ2015Äê10ÔÂ16ÈÕ£¬¶¨Î»¾«×¼Ò½ÁÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÁÙ´²Éñ¾­ÒÅ´«¼²²¡Õï¶Ï»ùÒò¼ì²â·şÎñÌá¹©ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆĞÅÏ¢»¯,¾«×¼Ò½ÁÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.70ÒÚÔª", "0"]}], "summary_show": {"ammount": "×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼şÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª", "industry": "ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª", "theme": "Ò½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ"}, "audio_url": ""}
+2021-05-12 14:50:14,838 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 14:50:14] "[37mGET /news/financingnews?page=1&date=0 HTTP/1.1[0m" 200 -
+2021-05-12 14:56:21,427 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-12 14:56:23.218276{"summary": {"content": "2021Äê5ÔÂ12ÈÕ£¬×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼ş£¬ÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª£¬ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª£¬ÈÈµã°å¿é¹Ø×¢£ºÒ½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ", "highlight": ["23Æğ", "45.66ÒÚÔª", "386.57ÒÚÔª"]}, "cases": [{"content": "\n                2021Äê5ÔÂ11ÈÕ,Moonalpha»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃ×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚºìÉ¼×Ê±¾ÖĞ¹ú,BAI£¨±´ËşË¹ÂüÑÇÖŞÍ¶×Ê»ù½ğ£©,Tiger GlobalµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.65ÒÚÔª¡£Babel±´±¦³ÉÁ¢ÓÚ2018Äê1ÔÂ1ÈÕ£¬¶¨Î»Êı×Ö»õ±ÒÖ§¸¶ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊı×Ö»õ±ÒÒøĞĞ£¬Éæ¼°Çø¿éÁ´,Êı×Ö»õ±Ò,Êı×Ö»õ±ÒÖ§¸¶µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Moonalpha", "2.59ÒÚÔª", "2.65ÒÚÔª", "0"], "title": "\n                Babel±´±¦»ñµÃÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê£¬Òı·¢¿§·È²èÒûÆ·ÅÆĞĞÒµÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ´´ĞÂ¹¤³¡µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.96Ç§ÍòÔª¡£Á¬¿§·ÈÁãÊÛ³ÉÁ¢ÓÚ2019Äê8ÔÂ30ÈÕ£¬¶¨Î»¿§·È²èÒûÆ·ÅÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÔ¤°ü×°¿§·ÈÁãÊÛÆ·ÅÆ£¬Éæ¼°Ïû·Ñ,Ê³,¿§·È²èÒûÆ·ÅÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.96Ç§ÍòÔª", "1.96Ç§ÍòÔª", "263637"], "title": "\n                Á¬¿§·ÈÁãÊÛ»ñµÃÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬»ñµÃ½ÌÓıO2OĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ±±¾©°Ù¼ÒÊÓÁª¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÌÒÀî×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.31Ç§ÍòÔª¡£Ğ£³¤°î³ÉÁ¢ÓÚ2011Äê2ÔÂ25ÈÕ£¬¶¨Î»½ÌÓıO2OĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÖ÷´òO2OÉç½»Óë×ÊÔ´ÕûºÏµÄ½ÌÓıĞĞÒµ·şÎñÆ½Ì¨£¬Éæ¼°Éú»î·şÎñ,O2O,½ÌÓıO2OµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "3.31Ç§ÍòÔª", "0"], "title": "\n                Ğ£³¤°î»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê£¬»ñµÃÍ¨ÓÃsaasĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÈíÒøÔ¸¾°»ù½ğ,¸ßÊ¢ÖĞ¹ú,´º»ª×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê27.75ÒÚÔª¡£±±É­ÔÆ³ÉÁ¢ÓÚ2005Äê5ÔÂ17ÈÕ£¬¶¨Î»Í¨ÓÃsaasĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ»Ìå»¯ÈË²Å¹ÜÀíÔÆÆ½Ì¨¹©Ó¦ÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,SAAS,Í¨ÓÃsaasµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾", "16.82ÒÚÔª", "27.75ÒÚÔª", "263551"], "title": "\n                ±±É­ÔÆ»ñµÃÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¹ú¼ÒµçÍ¶,±±±ä×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.01Ç§ÍòÔª¡£Æû³µĞÇÇò³ÉÁ¢ÓÚ2014Äê11ÔÂ24ÈÕ£¬¶¨Î»Æû³µ½»Í¨ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÆû³µĞÅÏ¢½»Á÷ÉçÇø£¬Éæ¼°Æû³µ½»Í¨,Æû³µ½»Ò×,Æû³µĞĞÒµĞÅÏ¢»¯µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.01Ç§ÍòÔª", "0"], "title": "\n                Æû³µĞÇÇò»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¶¦êÍÍ¶×Ê,Ææ¼¨´´Ì³,Ò©Ã÷¿µµÂµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.00Ç§ÍòÔª¡£´óÏğ¿Æ¼¼³ÉÁ¢ÓÚ2018Äê11ÔÂ13ÈÕ£¬¶¨Î»Ğ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÈËÌåÆ÷¹ÙĞ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,¼¯³ÉµçÂ·,Ğ¾Æ¬,Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼ÊõµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "4.00Ç§ÍòÔª", "0"], "title": "\n                ´óÏğ¿Æ¼¼»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê£¬»ñµÃ¹ã¸æÓªÏúĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚMirae Asset,½İ³ÉÊÀ¼Í,¹úÍ¶´´ÒæµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.45ÒÚÔª¡£ÌİÓ°´«Ã½³ÉÁ¢ÓÚ2017Äê3ÔÂ22ÈÕ£¬¶¨Î»¹ã¸æÓªÏúĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÉÌÎñÂ¥ÓîĞ§¹ûÃ½ÌåÔËÓªÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,ÍÆ¹ãÓªÏú,¹ã¸æÓªÏúµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "4.45ÒÚÔª", "0"], "title": "\n                ÌİÓ°´«Ã½»ñµÃÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÈ«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞÂË¿Â·½ğ¿Ø,ÉÏº£¾ıÊµÉúÎïÒ½Ò©¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.00ÒÚÔª¡£°¬ÃÀì³³ÉÁ¢ÓÚ2016Äê10ÔÂ10ÈÕ£¬¶¨Î»ÉúÎïÖÆÒ©ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃâÒßµ÷½Ú´´ĞÂÒ©ÎïÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼Êõ,ÉúÎïÖÆÒ©µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "2.00ÒÚÔª", "2.00ÒÚÔª", "259603"], "title": "\n                °¬ÃÀì³»ñµÃÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê£¬Òı·¢×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.27ÒÚÔª¡£´¨Íø´«Ã½³ÉÁ¢ÓÚ2009Äê12ÔÂ23ÈÕ£¬¶¨Î»ÎÄ»¯ÓéÀÖĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃ½Ìå×ÊÑ¶ÀàĞÂÃ½ÌåÆ½Ì¨£¬Éæ¼°ÎÄ»¯ÓéÀÖ,Ã½Ìå,ĞÂÃ½ÌåµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "2.27ÒÚÔª", "2.27ÒÚÔª", "0"], "title": "\n                ´¨Íø´«Ã½»ñµÃÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê£¬ÊÕµ½È«ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ°Ù¶È·çÍ¶,ÀÊÂê·å´´Í¶,¶¦ĞÄ×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê5.50Ç§ÍòÔª¡£ÌÇ¼ªÒ½ÁÆ³ÉÁ¢ÓÚ2016Äê8ÔÂ11ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª´úĞ»¼²²¡Ò½ÁÆÆ÷ĞµÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "5.50Ç§ÍòÔª", "5.50Ç§ÍòÔª", "0"], "title": "\n                ÌÇ¼ªÒ½ÁÆ»ñµÃÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÎïÁªÍøĞ¾Æ¬ĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÍ¬´´Î°Òµ,¶«·½¸»º£µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.50ÒÚÔª¡£ºËĞ¾»¥Áª³ÉÁ¢ÓÚ2017Äê6ÔÂ14ÈÕ£¬¶¨Î»ÎïÁªÍøĞ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊıÄ£»ìºÏĞÅºÅÁ´Ğ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÎïÁªÍø,ÎïÁªÍøÓ²¼ş,ÎïÁªÍøĞ¾Æ¬µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.00ÒÚÔª", "1.50ÒÚÔª", "0"], "title": "\n                ºËĞ¾»¥Áª»ñµÃÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê£¬ÊÕµ½Ò½ÁÆ½¡¿µĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¼Ã·å×Ê±¾,¹úÍ¶´´ºÏ,½¨·¢¹É·İµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.00ÒÚÔª¡£ÕéÒÚÒ½ÁÆ³ÉÁ¢ÓÚ2019Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª½á¹¹ĞÔĞÄÔà²¡Ò½ÁÆÆóÒµ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.00ÒÚÔª", "0"], "title": "\n                ÕéÒÚÒ½ÁÆ»ñµÃÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê£¬Òı·¢ÒµÄÚÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê10.25ÒÚÔª¡£»ªÍ¨ÏßÀÂ³ÉÁ¢ÓÚ2002Äê6ÔÂ21ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªµçÀÂÖÆÔìÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,µçÆøÉè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "3.84ÒÚÔª", "10.25ÒÚÔª", "23620"], "title": "\n                »ªÍ¨ÏßÀÂ»ñµÃÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê£¬»ñµÃÒ½ÁÆÆ÷ĞµĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ½­ËÕÓãÔ¾Ò½ÁÆÉè±¸¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.96ÒÚÔª¡£¿­Á¢ÌØÒ½ÁÆ³ÉÁ¢ÓÚ2010Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆÆ÷ĞµĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ½ÁÆ½¡¿µÓ²¼şÑĞ·¢ÖÆÔì£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾", "3.66ÒÚÔª", "4.96ÒÚÔª", "0"], "title": "\n                ¿­Á¢ÌØÒ½ÁÆ»ñµÃÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê£¬ÊÕµ½ÖÇÄÜÖÆÔìĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.53ÒÚÔª¡£Ñ¸½İĞË³ÉÁ¢ÓÚ2005Äê8ÔÂ19ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÓ¡ÖÆµçÂ·°åÉú²úÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾", "2.53ÒÚÔª", "2.53ÒÚÔª", "0"], "title": "\n                Ñ¸½İĞË»ñµÃÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê£¬Òı·¢È«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞË¸»Í¶×Ê,±±¼«¹â´´Í¶µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.00Ç§ÍòÔª¡£°¬¿Ï¹¤Òµ³ÉÁ¢ÓÚ2007Äê4ÔÂ10ÈÕ£¬¶¨Î»ÄÜÔ´·şÎñĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÕôÆû½ÚÄÜÉè±¸ÖÆÔìÓëÈÈÄÜ¹ÜÀí½â¾ö·½°¸Ìá¹©ÉÌ£¬Éæ¼°ÄÜÔ´µçÁ¦,ÄÜÔ´·şÎñ,ÄÜÔ´¹ÜÀí,ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸,Êı×Ö»¯ / ÖÇÄÜ»¯×ªĞÍµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.00Ç§ÍòÔª", "0"], "title": "\n                °¬¿Ï¹¤Òµ»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê£¬ÊÕµ½ÒµÄÚÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚË®Ä¾´´Í¶,ÆôµÏÖ®ĞÇ,³ĞÊ÷Í¶×ÊµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.70ÒÚÔª¡£Èü¸£»ùÒò³ÉÁ¢ÓÚ2015Äê10ÔÂ16ÈÕ£¬¶¨Î»¾«×¼Ò½ÁÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÁÙ´²Éñ¾­ÒÅ´«¼²²¡Õï¶Ï»ùÒò¼ì²â·şÎñÌá¹©ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆĞÅÏ¢»¯,¾«×¼Ò½ÁÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.70ÒÚÔª", "0"], "title": "\n                Èü¸£»ùÒò»ñµÃÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê\n                "}], "summary_show": {"ammount": "×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼şÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª", "industry": "ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª", "theme": "Ò½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ"}, "audio_url": ""}
+2021-05-12 14:56:23,219 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 14:56:23] "[37mGET /news/financingnews?page=1&date=0 HTTP/1.1[0m" 200 -
+2021-05-12 15:40:41.482944{"summary": {"content": "2021Äê5ÔÂ12ÈÕ£¬×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼ş£¬ÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª£¬ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª£¬ÈÈµã°å¿é¹Ø×¢£ºÒ½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ", "highlight": ["23Æğ", "45.66ÒÚÔª", "386.57ÒÚÔª"]}, "cases": [{"content": "\n                2021Äê5ÔÂ11ÈÕ,Moonalpha»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃ×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚºìÉ¼×Ê±¾ÖĞ¹ú,BAI£¨±´ËşË¹ÂüÑÇÖŞÍ¶×Ê»ù½ğ£©,Tiger GlobalµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.65ÒÚÔª¡£Babel±´±¦³ÉÁ¢ÓÚ2018Äê1ÔÂ1ÈÕ£¬¶¨Î»Êı×Ö»õ±ÒÖ§¸¶ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊı×Ö»õ±ÒÒøĞĞ£¬Éæ¼°Çø¿éÁ´,Êı×Ö»õ±Ò,Êı×Ö»õ±ÒÖ§¸¶µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Moonalpha", "2.59ÒÚÔª", "2.65ÒÚÔª", "0"], "title": "\n                Babel±´±¦»ñµÃÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê£¬Òı·¢¿§·È²èÒûÆ·ÅÆĞĞÒµÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ´´ĞÂ¹¤³¡µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.96Ç§ÍòÔª¡£Á¬¿§·ÈÁãÊÛ³ÉÁ¢ÓÚ2019Äê8ÔÂ30ÈÕ£¬¶¨Î»¿§·È²èÒûÆ·ÅÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÔ¤°ü×°¿§·ÈÁãÊÛÆ·ÅÆ£¬Éæ¼°Ïû·Ñ,Ê³,¿§·È²èÒûÆ·ÅÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.96Ç§ÍòÔª", "1.96Ç§ÍòÔª", "263637"], "title": "\n                Á¬¿§·ÈÁãÊÛ»ñµÃÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬»ñµÃ½ÌÓıO2OĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ±±¾©°Ù¼ÒÊÓÁª¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÌÒÀî×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.31Ç§ÍòÔª¡£Ğ£³¤°î³ÉÁ¢ÓÚ2011Äê2ÔÂ25ÈÕ£¬¶¨Î»½ÌÓıO2OĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÖ÷´òO2OÉç½»Óë×ÊÔ´ÕûºÏµÄ½ÌÓıĞĞÒµ·şÎñÆ½Ì¨£¬Éæ¼°Éú»î·şÎñ,O2O,½ÌÓıO2OµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "3.31Ç§ÍòÔª", "0"], "title": "\n                Ğ£³¤°î»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê£¬»ñµÃÍ¨ÓÃsaasĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÈíÒøÔ¸¾°»ù½ğ,¸ßÊ¢ÖĞ¹ú,´º»ª×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê27.75ÒÚÔª¡£±±É­ÔÆ³ÉÁ¢ÓÚ2005Äê5ÔÂ17ÈÕ£¬¶¨Î»Í¨ÓÃsaasĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ»Ìå»¯ÈË²Å¹ÜÀíÔÆÆ½Ì¨¹©Ó¦ÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,SAAS,Í¨ÓÃsaasµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾", "16.82ÒÚÔª", "27.75ÒÚÔª", "263551"], "title": "\n                ±±É­ÔÆ»ñµÃÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¹ú¼ÒµçÍ¶,±±±ä×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.01Ç§ÍòÔª¡£Æû³µĞÇÇò³ÉÁ¢ÓÚ2014Äê11ÔÂ24ÈÕ£¬¶¨Î»Æû³µ½»Í¨ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÆû³µĞÅÏ¢½»Á÷ÉçÇø£¬Éæ¼°Æû³µ½»Í¨,Æû³µ½»Ò×,Æû³µĞĞÒµĞÅÏ¢»¯µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.01Ç§ÍòÔª", "0"], "title": "\n                Æû³µĞÇÇò»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¶¦êÍÍ¶×Ê,Ææ¼¨´´Ì³,Ò©Ã÷¿µµÂµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.00Ç§ÍòÔª¡£´óÏğ¿Æ¼¼³ÉÁ¢ÓÚ2018Äê11ÔÂ13ÈÕ£¬¶¨Î»Ğ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÈËÌåÆ÷¹ÙĞ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,¼¯³ÉµçÂ·,Ğ¾Æ¬,Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼ÊõµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "4.00Ç§ÍòÔª", "0"], "title": "\n                ´óÏğ¿Æ¼¼»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê£¬»ñµÃ¹ã¸æÓªÏúĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚMirae Asset,½İ³ÉÊÀ¼Í,¹úÍ¶´´ÒæµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.45ÒÚÔª¡£ÌİÓ°´«Ã½³ÉÁ¢ÓÚ2017Äê3ÔÂ22ÈÕ£¬¶¨Î»¹ã¸æÓªÏúĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÉÌÎñÂ¥ÓîĞ§¹ûÃ½ÌåÔËÓªÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,ÍÆ¹ãÓªÏú,¹ã¸æÓªÏúµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "4.45ÒÚÔª", "0"], "title": "\n                ÌİÓ°´«Ã½»ñµÃÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÈ«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞÂË¿Â·½ğ¿Ø,ÉÏº£¾ıÊµÉúÎïÒ½Ò©¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.00ÒÚÔª¡£°¬ÃÀì³³ÉÁ¢ÓÚ2016Äê10ÔÂ10ÈÕ£¬¶¨Î»ÉúÎïÖÆÒ©ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃâÒßµ÷½Ú´´ĞÂÒ©ÎïÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼Êõ,ÉúÎïÖÆÒ©µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "2.00ÒÚÔª", "2.00ÒÚÔª", "259603"], "title": "\n                °¬ÃÀì³»ñµÃÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê£¬Òı·¢×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.27ÒÚÔª¡£´¨Íø´«Ã½³ÉÁ¢ÓÚ2009Äê12ÔÂ23ÈÕ£¬¶¨Î»ÎÄ»¯ÓéÀÖĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃ½Ìå×ÊÑ¶ÀàĞÂÃ½ÌåÆ½Ì¨£¬Éæ¼°ÎÄ»¯ÓéÀÖ,Ã½Ìå,ĞÂÃ½ÌåµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "2.27ÒÚÔª", "2.27ÒÚÔª", "0"], "title": "\n                ´¨Íø´«Ã½»ñµÃÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê£¬ÊÕµ½È«ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ°Ù¶È·çÍ¶,ÀÊÂê·å´´Í¶,¶¦ĞÄ×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê5.50Ç§ÍòÔª¡£ÌÇ¼ªÒ½ÁÆ³ÉÁ¢ÓÚ2016Äê8ÔÂ11ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª´úĞ»¼²²¡Ò½ÁÆÆ÷ĞµÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "5.50Ç§ÍòÔª", "5.50Ç§ÍòÔª", "0"], "title": "\n                ÌÇ¼ªÒ½ÁÆ»ñµÃÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÎïÁªÍøĞ¾Æ¬ĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÍ¬´´Î°Òµ,¶«·½¸»º£µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.50ÒÚÔª¡£ºËĞ¾»¥Áª³ÉÁ¢ÓÚ2017Äê6ÔÂ14ÈÕ£¬¶¨Î»ÎïÁªÍøĞ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊıÄ£»ìºÏĞÅºÅÁ´Ğ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÎïÁªÍø,ÎïÁªÍøÓ²¼ş,ÎïÁªÍøĞ¾Æ¬µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.00ÒÚÔª", "1.50ÒÚÔª", "0"], "title": "\n                ºËĞ¾»¥Áª»ñµÃÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê£¬ÊÕµ½Ò½ÁÆ½¡¿µĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¼Ã·å×Ê±¾,¹úÍ¶´´ºÏ,½¨·¢¹É·İµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.00ÒÚÔª¡£ÕéÒÚÒ½ÁÆ³ÉÁ¢ÓÚ2019Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª½á¹¹ĞÔĞÄÔà²¡Ò½ÁÆÆóÒµ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.00ÒÚÔª", "0"], "title": "\n                ÕéÒÚÒ½ÁÆ»ñµÃÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê£¬Òı·¢ÒµÄÚÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê10.25ÒÚÔª¡£»ªÍ¨ÏßÀÂ³ÉÁ¢ÓÚ2002Äê6ÔÂ21ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªµçÀÂÖÆÔìÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,µçÆøÉè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "3.84ÒÚÔª", "10.25ÒÚÔª", "23620"], "title": "\n                »ªÍ¨ÏßÀÂ»ñµÃÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê£¬»ñµÃÒ½ÁÆÆ÷ĞµĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ½­ËÕÓãÔ¾Ò½ÁÆÉè±¸¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.96ÒÚÔª¡£¿­Á¢ÌØÒ½ÁÆ³ÉÁ¢ÓÚ2010Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆÆ÷ĞµĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ½ÁÆ½¡¿µÓ²¼şÑĞ·¢ÖÆÔì£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾", "3.66ÒÚÔª", "4.96ÒÚÔª", "0"], "title": "\n                ¿­Á¢ÌØÒ½ÁÆ»ñµÃÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê£¬ÊÕµ½ÖÇÄÜÖÆÔìĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.53ÒÚÔª¡£Ñ¸½İĞË³ÉÁ¢ÓÚ2005Äê8ÔÂ19ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÓ¡ÖÆµçÂ·°åÉú²úÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾", "2.53ÒÚÔª", "2.53ÒÚÔª", "0"], "title": "\n                Ñ¸½İĞË»ñµÃÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê£¬Òı·¢È«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞË¸»Í¶×Ê,±±¼«¹â´´Í¶µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.00Ç§ÍòÔª¡£°¬¿Ï¹¤Òµ³ÉÁ¢ÓÚ2007Äê4ÔÂ10ÈÕ£¬¶¨Î»ÄÜÔ´·şÎñĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÕôÆû½ÚÄÜÉè±¸ÖÆÔìÓëÈÈÄÜ¹ÜÀí½â¾ö·½°¸Ìá¹©ÉÌ£¬Éæ¼°ÄÜÔ´µçÁ¦,ÄÜÔ´·şÎñ,ÄÜÔ´¹ÜÀí,ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸,Êı×Ö»¯ / ÖÇÄÜ»¯×ªĞÍµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.00Ç§ÍòÔª", "0"], "title": "\n                °¬¿Ï¹¤Òµ»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê£¬ÊÕµ½ÒµÄÚÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚË®Ä¾´´Í¶,ÆôµÏÖ®ĞÇ,³ĞÊ÷Í¶×ÊµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.70ÒÚÔª¡£Èü¸£»ùÒò³ÉÁ¢ÓÚ2015Äê10ÔÂ16ÈÕ£¬¶¨Î»¾«×¼Ò½ÁÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÁÙ´²Éñ¾­ÒÅ´«¼²²¡Õï¶Ï»ùÒò¼ì²â·şÎñÌá¹©ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆĞÅÏ¢»¯,¾«×¼Ò½ÁÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.70ÒÚÔª", "0"], "title": "\n                Èü¸£»ùÒò»ñµÃÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê\n                "}], "summary_show": {"ammount": "×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼şÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª", "industry": "ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª", "theme": "Ò½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ"}, "audio_url": ""}
+2021-05-12 15:40:41,483 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 15:40:41] "[37mGET /news/financingnews?page=1&date=0 HTTP/1.1[0m" 200 -
+2021-05-12 15:40:53,988 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-12 15:40:56.843272{"summary": {"content": "2021Äê5ÔÂ12ÈÕ£¬×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼ş£¬ÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª£¬ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª£¬ÈÈµã°å¿é¹Ø×¢£ºÒ½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ", "highlight": ["23Æğ", "45.66ÒÚÔª", "386.57ÒÚÔª"]}, "cases": [{"content": "\n                2021Äê5ÔÂ11ÈÕ,Moonalpha»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃ×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚºìÉ¼×Ê±¾ÖĞ¹ú,BAI£¨±´ËşË¹ÂüÑÇÖŞÍ¶×Ê»ù½ğ£©,Tiger GlobalµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.65ÒÚÔª¡£Babel±´±¦³ÉÁ¢ÓÚ2018Äê1ÔÂ1ÈÕ£¬¶¨Î»Êı×Ö»õ±ÒÖ§¸¶ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊı×Ö»õ±ÒÒøĞĞ£¬Éæ¼°Çø¿éÁ´,Êı×Ö»õ±Ò,Êı×Ö»õ±ÒÖ§¸¶µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Moonalpha", "2.59ÒÚÔª", "2.65ÒÚÔª", "0"], "title": "\n                Babel±´±¦»ñµÃÈËÃñ±Ò2.59ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê£¬Òı·¢¿§·È²èÒûÆ·ÅÆĞĞÒµÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ´´ĞÂ¹¤³¡µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.96Ç§ÍòÔª¡£Á¬¿§·ÈÁãÊÛ³ÉÁ¢ÓÚ2019Äê8ÔÂ30ÈÕ£¬¶¨Î»¿§·È²èÒûÆ·ÅÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÔ¤°ü×°¿§·ÈÁãÊÛÆ·ÅÆ£¬Éæ¼°Ïû·Ñ,Ê³,¿§·È²èÒûÆ·ÅÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£À´ºÀË¹¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.96Ç§ÍòÔª", "1.96Ç§ÍòÔª", "263637"], "title": "\n                Á¬¿§·ÈÁãÊÛ»ñµÃÈËÃñ±Ò1.96Ç§ÍòÔªÌìÊ¹ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬»ñµÃ½ÌÓıO2OĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ±±¾©°Ù¼ÒÊÓÁª¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÌÒÀî×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.31Ç§ÍòÔª¡£Ğ£³¤°î³ÉÁ¢ÓÚ2011Äê2ÔÂ25ÈÕ£¬¶¨Î»½ÌÓıO2OĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÖ÷´òO2OÉç½»Óë×ÊÔ´ÕûºÏµÄ½ÌÓıĞĞÒµ·şÎñÆ½Ì¨£¬Éæ¼°Éú»î·şÎñ,O2O,½ÌÓıO2OµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉÏº£Í¨½ÜĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "3.31Ç§ÍòÔª", "0"], "title": "\n                Ğ£³¤°î»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê£¬»ñµÃÍ¨ÓÃsaasĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÈíÒøÔ¸¾°»ù½ğ,¸ßÊ¢ÖĞ¹ú,´º»ª×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê27.75ÒÚÔª¡£±±É­ÔÆ³ÉÁ¢ÓÚ2005Äê5ÔÂ17ÈÕ£¬¶¨Î»Í¨ÓÃsaasĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ»Ìå»¯ÈË²Å¹ÜÀíÔÆÆ½Ì¨¹©Ó¦ÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,SAAS,Í¨ÓÃsaasµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©±±É­ÔÆ¼ÆËã¹É·İÓĞÏŞ¹«Ë¾", "16.82ÒÚÔª", "27.75ÒÚÔª", "263551"], "title": "\n                ±±É­ÔÆ»ñµÃÈËÃñ±Ò16.82ÒÚÔªFÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¹ú¼ÒµçÍ¶,±±±ä×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.01Ç§ÍòÔª¡£Æû³µĞÇÇò³ÉÁ¢ÓÚ2014Äê11ÔÂ24ÈÕ£¬¶¨Î»Æû³µ½»Í¨ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÆû³µĞÅÏ¢½»Á÷ÉçÇø£¬Éæ¼°Æû³µ½»Í¨,Æû³µ½»Ò×,Æû³µĞĞÒµĞÅÏ¢»¯µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÎÀ´ïĞÅÏ¢¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.01Ç§ÍòÔª", "0"], "title": "\n                Æû³µĞÇÇò»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªA+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê£¬ÊÕµ½×Ê±¾ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¶¦êÍÍ¶×Ê,Ææ¼¨´´Ì³,Ò©Ã÷¿µµÂµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.00Ç§ÍòÔª¡£´óÏğ¿Æ¼¼³ÉÁ¢ÓÚ2018Äê11ÔÂ13ÈÕ£¬¶¨Î»Ğ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÈËÌåÆ÷¹ÙĞ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,¼¯³ÉµçÂ·,Ğ¾Æ¬,Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼ÊõµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©´óÏğ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "4.00Ç§ÍòÔª", "0"], "title": "\n                ´óÏğ¿Æ¼¼»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê£¬»ñµÃ¹ã¸æÓªÏúĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚMirae Asset,½İ³ÉÊÀ¼Í,¹úÍ¶´´ÒæµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.45ÒÚÔª¡£ÌİÓ°´«Ã½³ÉÁ¢ÓÚ2017Äê3ÔÂ22ÈÕ£¬¶¨Î»¹ã¸æÓªÏúĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÉÌÎñÂ¥ÓîĞ§¹ûÃ½ÌåÔËÓªÉÌ£¬Éæ¼°ÆóÒµ·şÎñ,ÍÆ¹ãÓªÏú,¹ã¸æÓªÏúµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["±±¾©ÌİÓ°´«Ã½¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "4.45ÒÚÔª", "0"], "title": "\n                ÌİÓ°´«Ã½»ñµÃÈËÃñ±Ò3.00ÒÚÔªB3ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÈ«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞÂË¿Â·½ğ¿Ø,ÉÏº£¾ıÊµÉúÎïÒ½Ò©¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.00ÒÚÔª¡£°¬ÃÀì³³ÉÁ¢ÓÚ2016Äê10ÔÂ10ÈÕ£¬¶¨Î»ÉúÎïÖÆÒ©ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃâÒßµ÷½Ú´´ĞÂÒ©ÎïÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆ¼¼Êõ,ÉúÎïÖÆÒ©µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÄÏ¾©°¬ÃÀì³ÉúÎïÒ½Ò©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "2.00ÒÚÔª", "2.00ÒÚÔª", "259603"], "title": "\n                °¬ÃÀì³»ñµÃÈËÃñ±Ò2.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê£¬Òı·¢×Ê±¾ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.27ÒÚÔª¡£´¨Íø´«Ã½³ÉÁ¢ÓÚ2009Äê12ÔÂ23ÈÕ£¬¶¨Î»ÎÄ»¯ÓéÀÖĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÃ½Ìå×ÊÑ¶ÀàĞÂÃ½ÌåÆ½Ì¨£¬Éæ¼°ÎÄ»¯ÓéÀÖ,Ã½Ìå,ĞÂÃ½ÌåµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ËÄ´¨ĞÂÎÅÍø´«Ã½¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "2.27ÒÚÔª", "2.27ÒÚÔª", "0"], "title": "\n                ´¨Íø´«Ã½»ñµÃÈËÃñ±Ò2.27ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê£¬ÊÕµ½È«ÊĞ³¡ÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ°Ù¶È·çÍ¶,ÀÊÂê·å´´Í¶,¶¦ĞÄ×Ê±¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê5.50Ç§ÍòÔª¡£ÌÇ¼ªÒ½ÁÆ³ÉÁ¢ÓÚ2016Äê8ÔÂ11ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª´úĞ»¼²²¡Ò½ÁÆÆ÷ĞµÑĞ·¢ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["º¼ÖİÌÇ¼ªÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "5.50Ç§ÍòÔª", "5.50Ç§ÍòÔª", "0"], "title": "\n                ÌÇ¼ªÒ½ÁÆ»ñµÃÈËÃñ±Ò5.50Ç§ÍòÔªB+ÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê£¬»ñµÃÎïÁªÍøĞ¾Æ¬ĞĞÒµÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚÍ¬´´Î°Òµ,¶«·½¸»º£µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê1.50ÒÚÔª¡£ºËĞ¾»¥Áª³ÉÁ¢ÓÚ2017Äê6ÔÂ14ÈÕ£¬¶¨Î»ÎïÁªÍøĞ¾Æ¬ĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÊıÄ£»ìºÏĞÅºÅÁ´Ğ¾Æ¬ÑĞ·¢ÉÌ£¬Éæ¼°ÎïÁªÍø,ÎïÁªÍøÓ²¼ş,ÎïÁªÍøĞ¾Æ¬µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºËĞ¾»¥Áª±±¾©¿Æ¼¼ÓĞÏŞ¹«Ë¾", "1.00ÒÚÔª", "1.50ÒÚÔª", "0"], "title": "\n                ºËĞ¾»¥Áª»ñµÃÈËÃñ±Ò1.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê£¬ÊÕµ½Ò½ÁÆ½¡¿µĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ¼Ã·å×Ê±¾,¹úÍ¶´´ºÏ,½¨·¢¹É·İµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.00ÒÚÔª¡£ÕéÒÚÒ½ÁÆ³ÉÁ¢ÓÚ2019Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆ½¡¿µĞĞÒµ£¬Ö÷ÓªÒµÎñÎª½á¹¹ĞÔĞÄÔà²¡Ò½ÁÆÆóÒµ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["½­ËÕÕéÒÚÒ½ÁÆ¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.00ÒÚÔª", "0"], "title": "\n                ÕéÒÚÒ½ÁÆ»ñµÃÈËÃñ±Ò3.00ÒÚÔªAÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê£¬Òı·¢ÒµÄÚÈÈµã¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê10.25ÒÚÔª¡£»ªÍ¨ÏßÀÂ³ÉÁ¢ÓÚ2002Äê6ÔÂ21ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªµçÀÂÖÆÔìÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,µçÆøÉè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ºÓ±±»ªÍ¨ÏßÀÂ¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾", "3.84ÒÚÔª", "10.25ÒÚÔª", "23620"], "title": "\n                »ªÍ¨ÏßÀÂ»ñµÃÈËÃñ±Ò3.84ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê£¬»ñµÃÒ½ÁÆÆ÷ĞµĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚ½­ËÕÓãÔ¾Ò½ÁÆÉè±¸¹É·İÓĞÏŞ¹«Ë¾µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê4.96ÒÚÔª¡£¿­Á¢ÌØÒ½ÁÆ³ÉÁ¢ÓÚ2010Äê7ÔÂ15ÈÕ£¬¶¨Î»Ò½ÁÆÆ÷ĞµĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÒ½ÁÆ½¡¿µÓ²¼şÑĞ·¢ÖÆÔì£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆÆ÷ĞµµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Õã½­¿­Á¢ÌØÒ½ÁÆÆ÷ĞµÓĞÏŞ¹«Ë¾", "3.66ÒÚÔª", "4.96ÒÚÔª", "0"], "title": "\n                ¿­Á¢ÌØÒ½ÁÆ»ñµÃÈËÃñ±Ò3.66ÒÚÔª²¢¹ºÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê£¬ÊÕµ½ÖÇÄÜÖÆÔìĞĞÒµ¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê2.53ÒÚÔª¡£Ñ¸½İĞË³ÉÁ¢ÓÚ2005Äê8ÔÂ19ÈÕ£¬¶¨Î»ÖÇÄÜÖÆÔìĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÓ¡ÖÆµçÂ·°åÉú²úÉÌ£¬Éæ¼°ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸µÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["ÉîÛÚÊĞÑ¸½İĞË¿Æ¼¼¹É·İÓĞÏŞ¹«Ë¾", "2.53ÒÚÔª", "2.53ÒÚÔª", "0"], "title": "\n                Ñ¸½İĞË»ñµÃÈËÃñ±Ò2.53ÒÚÔªIPOÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê£¬Òı·¢È«ÊĞ³¡¾Û½¹£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚĞË¸»Í¶×Ê,±±¼«¹â´´Í¶µÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê6.00Ç§ÍòÔª¡£°¬¿Ï¹¤Òµ³ÉÁ¢ÓÚ2007Äê4ÔÂ10ÈÕ£¬¶¨Î»ÄÜÔ´·şÎñĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÕôÆû½ÚÄÜÉè±¸ÖÆÔìÓëÈÈÄÜ¹ÜÀí½â¾ö·½°¸Ìá¹©ÉÌ£¬Éæ¼°ÄÜÔ´µçÁ¦,ÄÜÔ´·şÎñ,ÄÜÔ´¹ÜÀí,ÖÇÄÜÖÆÔì,ÖÇÄÜÖÆÔì×°±¸,ÒÇÆ÷Éè±¸,Êı×Ö»¯ / ÖÇÄÜ»¯×ªĞÍµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["°¬¿Ï½­ËÕ¹¤Òµ¼¼ÊõÓĞÏŞ¹«Ë¾", "3.00Ç§ÍòÔª", "6.00Ç§ÍòÔª", "0"], "title": "\n                °¬¿Ï¹¤Òµ»ñµÃÈËÃñ±Ò3.00Ç§ÍòÔªBÂÖÈÚ×Ê\n                "}, {"content": "\n                2021Äê5ÔÂ11ÈÕ,Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾»ñµÃÈ«ÊĞ³¡ÊĞ³¡ÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê£¬ÊÕµ½ÒµÄÚÃÜÇĞ¹Ø×¢£¬ÇşµÀ×Ê½ğÀ´Ô´ÓÚË®Ä¾´´Í¶,ÆôµÏÖ®ĞÇ,³ĞÊ÷Í¶×ÊµÈ»ú¹¹£¬Ä¿Ç°ÀÛ»ıÈÚ×Ê3.70ÒÚÔª¡£Èü¸£»ùÒò³ÉÁ¢ÓÚ2015Äê10ÔÂ16ÈÕ£¬¶¨Î»¾«×¼Ò½ÁÆĞĞÒµ£¬Ö÷ÓªÒµÎñÎªÁÙ´²Éñ¾­ÒÅ´«¼²²¡Õï¶Ï»ùÒò¼ì²â·şÎñÌá¹©ÉÌ£¬Éæ¼°Ò½ÁÆ½¡¿µ,Ò½ÁÆĞÅÏ¢»¯,¾«×¼Ò½ÁÆµÈ°å¿é¸ÅÄî¡£\n                ", "highlight": ["Èü¸£½âÂë±±¾©»ùÒò¿Æ¼¼ÓĞÏŞ¹«Ë¾", "3.00ÒÚÔª", "3.70ÒÚÔª", "0"], "title": "\n                Èü¸£»ùÒò»ñµÃÈËÃñ±Ò3.00ÒÚÔªBÂÖÈÚ×Ê\n                "}], "summary_show": {"ammount": "×î½ü½»Ò×ÈÕÈ«¹ú·¶Î§ÄÚ¹²·¢Éú23ÆğÈÚ×ÊÊÂ¼şÒÑÅûÂ¶×ÜÈÚ×Ê½ğ¶îÎªÈËÃñ±Ò45.66ÒÚÔª", "industry": "ĞĞÒµ·Ö²¼ÓÚÊı×Ö»õ±ÒÖ§¸¶,¿§·È²èÒûÆ·ÅÆ,½ÌÓıO2OµÈ,ÆäÖĞ±±¾©Éîî£²©Áª¿Æ¼¼ÓĞÏŞÔğÈÎ¹«Ë¾,±±¾©³¬²ÄĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾,»ªÓ³¿Æ¼¼¼¯ÍÅ¹É·İÓĞÏŞ¹«Ë¾,º¼ÖİÁéÎ÷»úÆ÷ÈËÖÇÄÜ¿Æ¼¼ÓĞÏŞ¹«Ë¾,º¼ÖİÏÊãå¿Æ¼¼ÓĞÏŞ¹«Ë¾,ÉîÛÚÊĞÌìº£ÊÀ½çÎÀĞÇÍ¨ĞÅ¿Æ¼¼ÓĞÏŞ¹«Ë¾Î´ÅûÂ¶ÈÚ×Ê½ğ¶î,5ÔÂÀÛ¼ÆÈÚ×ÊÈËÃñ±Ò386.57ÒÚÔª", "theme": "Ò½ÁÆ½¡¿µ,ÖÇÄÜÖÆÔì,ÆóÒµ·şÎñ"}, "audio_url": ""}
+2021-05-12 15:40:56,843 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 127.0.0.1 - - [12/May/2021 15:40:56] "[37mGET /news/financingnews?page=1&date=0 HTTP/1.1[0m" 200 -
+2021-05-24 17:29:59,521 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-24 17:31:59,898 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-24 17:32:07,008 - D:\anconda\lib\site-packages\numexpr\utils.py[line:129] - INFO: Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2021-05-24 17:32:07,008 - D:\anconda\lib\site-packages\numexpr\utils.py[line:141] - INFO: NumExpr defaulting to 8 threads.
+2021-05-24 17:32:11.923270D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:32:12.046907
+2021-05-24 17:32:21.346874D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:32:21.445610
+2021-05-24 17:32:29.611293D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:32:29.710000
+2021-05-24 17:32:42.590989D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:32:42.688729
+2021-05-24 17:32:51.665221D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:32:51.775307
+2021-05-24 17:33:00.231780D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:33:00.307579
+2021-05-24 17:33:09.033272D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:33:09.111060
+2021-05-24 17:33:15.129422D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:33:15.204223
+2021-05-24 17:33:23.746446D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:33:23.821249
+2021-05-24 17:33:33.068853D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:33:33.154623
+2021-05-24 17:33:44,595 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO:  * Running on http://0.0.0.0:7960/ (Press CTRL+C to quit)
+2021-05-24 17:33:56,185 - D:\anconda\lib\site-packages\numexpr\utils.py[line:129] - INFO: Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2021-05-24 17:33:56,185 - D:\anconda\lib\site-packages\numexpr\utils.py[line:141] - INFO: NumExpr defaulting to 8 threads.
+2021-05-24 17:34:01.050277D:\python_zhoutianlian\fuyou_flask/audio/
+2021-05-24 17:34:01.154264
+2021-05-24 17:34:01.202119Success
+2021-05-24 17:34:01,202 - D:\anconda\lib\site-packages\werkzeug\_internal.py[line:113] - INFO: 192.168.1.109 - - [24/May/2021 17:34:01] "[37mGET /news/makeupfinancingnews?ndays=1 HTTP/1.1[0m" 200 -
