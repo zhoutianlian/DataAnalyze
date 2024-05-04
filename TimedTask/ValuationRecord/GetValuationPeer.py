@@ -1,6 +1,6 @@
 import pymysql
 
-from config.globalENV import global_var
+from CONFIG.globalENV import global_var
 
 
 def get_peer(peer_s):

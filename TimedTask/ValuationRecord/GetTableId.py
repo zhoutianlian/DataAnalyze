@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-from config.globalENV import global_var
+from CONFIG.globalENV import global_var
 
 
 def get_table_id(table_name):

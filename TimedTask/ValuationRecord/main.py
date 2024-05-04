@@ -25,6 +25,7 @@ def start():
                 return "缺少参数flow"
             elif 'hypo' not in all_data:
                 return "缺少参数hypo"
+
             elif 'bm' not in all_data:
                 return "缺少参数bm"
             elif 'type' not in all_data:

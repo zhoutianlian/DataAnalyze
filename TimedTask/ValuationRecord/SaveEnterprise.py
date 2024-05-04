@@ -1,7 +1,7 @@
 import requests
 
 from log.log import logger
-from config.globalENV import global_var
+from CONFIG.globalENV import global_var
 
 
 def save(name):
@@ -22,5 +22,5 @@ def save(name):
         print('save', e)
 
 if __name__ == '__main__':
-    e_id = save(name = '上海中建东孚物业管理有限公司上海分公司')
+    e_id = save(name = '深圳华强实业股份有限公司')
     print(e_id)

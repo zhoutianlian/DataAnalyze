@@ -4,7 +4,7 @@ import time
 from pandas import Timestamp
 
 from ValuationRecord import SaveEnterprise, GetTableId, GetValuationPeer
-from config.globalENV import global_var
+from CONFIG.globalENV import global_var
 
 
 def start(enter):
